@@ -11,15 +11,26 @@ namespace EmailReader
 {
     public class Credentials
     {
-        public static FileInfo FileIn = new FileInfo("");
+        Credentials()
+        {
 
-        public static FileInfo FileOut = new FileInfo("");
+        }
 
-        public static String emailFrom = "berrylantis@gmail.com";
+        public static String GetCredentials()
+        {
+            String str = File.ReadAllText(Credentials.DocumentsFolder + @"HalBookApp\Credentials.txt").Replace("\n", "").Replace(" ", "");
+            return str;
+        }
 
-        public static String SMTPEmail = "berrylantis@gmail.com";
+        public static String emailFrom => GetCredentials().Split(',')[0];
 
-        public static String SMTPPassword = "berrylantis@gmail.com";
+        public static String SMTPEmail => GetCredentials().Split(',')[0];
+
+        public static String SMTPPassword => GetCredentials().Split(',')[1];
+
+        public static String homePath => Environment.GetEnvironmentVariable("HOMEPATH");
+
+        public static String DocumentsFolder => @"C:\" + homePath + @"\Documents\";
 
     }
 }

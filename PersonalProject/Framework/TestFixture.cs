@@ -32,7 +32,7 @@ namespace PersonalProject.Framework
         [OneTimeSetUp, Retry(2)]
         public void CreateChromeDriver()
         {
-            ChromeDriverClass.Driver = ChromeDriverClass.CreateDriver(MessengerClass.MessengerLink);
+            //ChromeDriverClass.Driver = ChromeDriverClass.CreateDriver(MessengerClass.MessengerLink);
         }
 
         [SetUp]

@@ -19,8 +19,6 @@ namespace EmailReader //rename
 
         public static String ReadText(String fileName = "")
         {
-            if (fileName == "")
-                fileName = Credentials.FileIn.FullName;
             return File.ReadAllText(fileName);
         }
 
@@ -50,8 +48,6 @@ namespace EmailReader //rename
                 mail.Body = "Here is your story booklet! Emailed to you at " + DateTime.Now.ToString();
 
                 System.Net.Mail.Attachment attachment;
-                if (file == "")
-                    file = Credentials.FileOut.FullName;
                 attachment = new System.Net.Mail.Attachment(file);
                 mail.Attachments.Add(attachment);
 
@@ -81,8 +77,6 @@ namespace EmailReader //rename
                 mail.Body = body;
 
                 System.Net.Mail.Attachment attachment;
-                if (file == "")
-                    file = Credentials.FileOut.FullName;
                 attachment = new System.Net.Mail.Attachment(file);
                 mail.Attachments.Add(attachment);
 

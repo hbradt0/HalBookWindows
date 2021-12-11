@@ -4,27 +4,39 @@ using PersonalProject.Pages;
 using System;
 using System.Diagnostics;
 using System.IO;
+using EmailReader;
 
 namespace PersonalProject
 {
     public class EmailTest: TestFixture
     {
-
-        [Test, Category("Sample Send Message")]
+        [Test, Category("Sample Send Message"), Category("Sanity")] //Change creds in credentials.cs
         public void Email() 
         {
-            var homePath = Environment.GetEnvironmentVariable("HOMEPATH");
-            String emailListFile = @"C:\"+homePath+@"\Documents\HalEmailList.txt";
-            FileInfo file = new FileInfo(@"C:\" + homePath + @"\Documents\XXX" + DateTime.Now.ToString("MMddYYYY")+".txt");
+            String emailListFile = Credentials.DocumentsFolder+@"HalBookApp\EmailList.txt";
+            DirectoryInfo dir = new DirectoryInfo(Credentials.DocumentsFolder + @"HalBookApp");
 
-            var email = EmailReader.EmailFileRead.GetEmailsFromFile(emailListFile);
-            String text = EmailReader.EmailFileRead.ReadText(file.FullName);
+            FileInfo file = null;
+            foreach (var f in dir.GetFiles())
+            {
+                if(f.FullName.Contains(DateTime.Now.ToString("MMddYYYY")) || f.FullName.Contains(DateTime.Now.ToString("MMddyy")))
+                {
+                    file = new FileInfo(f.FullName);
+                }
+            }
+
+            var email = EmailFileRead.GetEmailsFromFile(emailListFile);
             foreach (var e in email)
             {
-                if (file.Exists)
+                if (file!=null && file.Exists)
                 {
-                    if (EmailReader.EmailFileRead.ValidateEmail(e))
-                        EmailReader.EmailFileRead.EmailTestResultsEmail(e,"EmailMePlease",text,file.FullName);
+                    if (EmailFileRead.ValidateEmail(e))
+                        EmailFileRead.EmailTestResultsEmail(e,"EmailMePlease","Important",file.FullName);
+                }
+                else
+                {
+                    Console.WriteLine("Didn't send anything");
+                    File.WriteAllText(file.FullName,"You didn't send anything today!");
                 }
             }
         }

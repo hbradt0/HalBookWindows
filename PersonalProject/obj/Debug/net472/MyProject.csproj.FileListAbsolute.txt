@@ -5,6 +5,8 @@ C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\nu
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\nunit.engine.core.dll
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\Framework\Halbook.txt
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\Resources\chromedriver.exe
+C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\Scheduler\ScheduleTest.bat
+C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\Scheduler\ScheduleTestSetup.bat
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\MyProject.dll.config
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\MyProject.dll
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\MyProject.pdb
@@ -21,12 +23,10 @@ C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\Te
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\System.Threading.Tasks.Extensions.dll
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\System.ValueTuple.dll
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\Utf8Json.dll
-C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.csproj.AssemblyReference.cache
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.AssemblyInfoInputs.cache
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.AssemblyInfo.cs
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.csproj.CoreCompileInputs.cache
-C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.csproj.CopyComplete
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.dll
 C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.pdb
-C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\bin\Debug\net472\bin\Debug\net472\MyProject.dll
+C:\Users\hbradt\source\repos\PersonalProject\PersonalProject\obj\Debug\net472\MyProject.csproj.AssemblyReference.cache
