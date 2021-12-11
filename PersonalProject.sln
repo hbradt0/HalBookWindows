@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProject", "PersonalProject\MyProject.csproj", "{2D97D093-EDAD-48F4-B5D1-C48CD5FEF32D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		PIXEL|Any CPU = PIXEL|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D97D093-EDAD-48F4-B5D1-C48CD5FEF32D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D97D093-EDAD-48F4-B5D1-C48CD5FEF32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D97D093-EDAD-48F4-B5D1-C48CD5FEF32D}.PIXEL|Any CPU.ActiveCfg = PIXEL|Any CPU
+		{2D97D093-EDAD-48F4-B5D1-C48CD5FEF32D}.PIXEL|Any CPU.Build.0 = PIXEL|Any CPU
+		{2D97D093-EDAD-48F4-B5D1-C48CD5FEF32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D97D093-EDAD-48F4-B5D1-C48CD5FEF32D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {331EE780-8B82-4D03-9A38-BD1844EE8F98}
+	EndGlobalSection
+EndGlobal
