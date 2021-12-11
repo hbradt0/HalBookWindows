@@ -5,7 +5,7 @@
 ::@set /p TargetPath=<%~dp0TargetPath
 
 :: Create event in task scheduler.
-schtasks /create /sc DAILY /tn "Desktop\EmailList" /tr "\"%~dp0ScheduleTest.bat\"" /st 14:00 /f /rl HIGHEST
+schtasks /create /sc DAILY /tn "Desktop\EmailList" /tr "\"%~dp0ScheduleTest.bat\"" /st 16:00 /f /rl HIGHEST
 
 :: ========
 :: Reference: docs.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks

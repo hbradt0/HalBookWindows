@@ -31,7 +31,7 @@ namespace PersonalProject
                 if (file!=null && file.Exists)
                 {
                     if (EmailFileRead.ValidateEmail(e))
-                        EmailFileRead.EmailTestResultsEmail(e,"EmailMePlease","Important",file.FullName);
+                        EmailFileRead.EmailTestResultsEmail(e,DateTime.Now.ToString("MMdd")+" Important","To whom it may concern\n Please check the attachment below!\nThanks, Haley B",file.FullName);
                 }
                 else
                 {
