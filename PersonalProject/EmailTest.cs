@@ -40,12 +40,12 @@ namespace PersonalProject
                 else
                 {
                     Console.WriteLine("Didn't send anything");
-                    File.WriteAllText(file.FullName,"You didn't send anything today!");
+                    File.WriteAllText(dir+"Error_"+ DateTime.Now.ToString("MMddYYYY"), "You didn't send anything today!");
                 }
             }
         }
 
-        [Test, Category("Sample Send Message"), Category("Sanity")] 
+        [Test, Category("Sample Send Message"), Category("Sanity and t")] 
         public void Text()
         {
             String textListFile = Credentials.DocumentsFolder + @"HalBookApp\TextList.txt";
