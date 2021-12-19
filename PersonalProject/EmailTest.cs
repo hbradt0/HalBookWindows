@@ -45,7 +45,7 @@ namespace PersonalProject
             }
         }
 
-        [Test, Category("Sample Send Message"), Category("Sanity and t")] 
+        [Test, Category("Sample Send Message"), Category("Sanity")] 
         public void Text()
         {
             String textListFile = Credentials.DocumentsFolder + @"HalBookApp\TextList.txt";
@@ -67,6 +67,15 @@ namespace PersonalProject
                 }
             }
 
+            FileInfo file2 = null;
+            foreach (var f in dir.GetFiles())
+            {
+                if ((f.FullName.Contains(DateTime.Now.ToString("MMddYYYY")) || f.FullName.Contains(DateTime.Now.ToString("MMddyy"))) && !f.FullName.ToLower().Contains("body"))
+                {
+                    file2 = new FileInfo(f.FullName);
+                }
+            }
+
             var text = EmailFileRead.GetTextsFromFile(textListFile);
             foreach (var e in text)
             {
@@ -78,12 +87,17 @@ namespace PersonalProject
                 else if(file == null && bodyExists)
                 {
                     if (EmailFileRead.ValidateText(e))
-                        EmailFileRead.SendText(e, DateTime.Now.ToString("MMdd") + " Important", body, "");
+                    {
+                        if (file2 != null && file2.Exists)
+                            EmailFileRead.SendText(e, DateTime.Now.ToString("MMdd") + " Important", body, file2.FullName);
+                        else
+                            EmailFileRead.SendText(e, DateTime.Now.ToString("MMdd") + " Important", body, "");
+                    }
                 }
                 else
                 {
                     Console.WriteLine("Didn't send anything");
-                    File.WriteAllText(file.FullName, "You didn't send anything today!");
+                    File.WriteAllText(dir + "Error_" + DateTime.Now.ToString("MMddYYYY"), "You didn't send anything today!");
                 }
             }
         }

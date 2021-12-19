@@ -26,11 +26,11 @@ namespace EmailReader //rename
                 carrier.Add("@vtext.com");
                 carrier.Add("@messaging.sprintpcs.com");
                 carrier.Add("@tmomail.net");
-                carrier.Add("@vmobl.com");
-                carrier.Add("@messaging.nextel.com");
-                carrier.Add("@myboostmobile.com");
-                carrier.Add("@message.alltel.com");
-                carrier.Add("@mms.ee.co.uk");
+                //carrier.Add("@vmobl.com");
+                //carrier.Add("@messaging.nextel.com");
+                //carrier.Add("@myboostmobile.com");
+                //carrier.Add("@message.alltel.com");
+                //carrier.Add("@mms.ee.co.uk");
                 return carrier;
             }
         }           
